@@ -20,6 +20,9 @@ export function Header() {
               <Link href="/shop" className="hover:text-gray-200 transition-colors">
                 Shop
               </Link>
+              <Link href="/wonders" className="hover:text-gray-200 transition-colors">
+                Wonders
+              </Link>
               <Link href="/sell" className="hover:text-gray-200 transition-colors">
                 Sell
               </Link>
