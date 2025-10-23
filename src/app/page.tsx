@@ -1,3 +1,4 @@
+// WonderWorld - Explore Amazing Places Around the World
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { ItemCard } from '@/components/item-card';
