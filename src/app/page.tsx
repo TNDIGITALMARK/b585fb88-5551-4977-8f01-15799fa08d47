@@ -104,7 +104,7 @@ function ProductCard({ product }: { product: typeof products[0] }) {
 
 export default function Homepage() {
   return (
-    <div className="min-h-screen bg-[hsl(var(--background))]">
+    <div className="min-h-screen bg-[#E0F2FE]">
       {/* Header - Matching design reference */}
       <header className="bg-white border-b border-[hsl(var(--border))] sticky top-0 z-50">
         <div className="container mx-auto px-6 py-3">
