@@ -104,8 +104,13 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 mt-8 pt-8 text-sm text-center text-gray-300">
-          <p>© 2024 RE-USE & FIND. All rights reserved.</p>
+        <div className="border-t border-white/10 mt-8 pt-8 text-sm text-center">
+          <p className="text-[#6B7280] mb-2">
+            Discover the world&apos;s most incredible places
+          </p>
+          <p className="text-[#6B7280]">
+            © {new Date().getFullYear()} RE-USE & FIND. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
