@@ -11,22 +11,22 @@
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
-  /* Color Palette - Exact values from design reference */
-  /* Primary Navy Blue (Hero, Header) - HSL conversion of #1e3a5f */
-  --color-navy-dark: 210 51% 25%;
-  --color-navy: 210 51% 35%;
-  --color-navy-light: 210 45% 45%;
+  /* Color Palette - Exact values extracted from design reference */
+  /* Primary Navy Blue (Hero, Header, Navigation) - #2C4F6F */
+  --color-navy-dark: 210 44% 30%;
+  --color-navy: 210 44% 35%;
+  --color-navy-light: 210 40% 45%;
 
-  /* Medium Blue (Buttons, Accents) - HSL conversion of #4A7BA7 */
-  --color-blue: 207 39% 47%;
-  --color-blue-light: 207 39% 57%;
+  /* Medium Blue (Secondary elements, Feature cards) - #5B8BB5 */
+  --color-blue: 207 42% 55%;
+  --color-blue-light: 207 42% 65%;
 
-  /* Orange Accent (CTA Buttons) - HSL conversion of #E67E22 */
-  --color-orange: 28 80% 52%;
-  --color-orange-dark: 28 80% 42%;
+  /* Accent Blue (Buttons, Highlights) - #6FA3D1 */
+  --color-accent-blue: 207 55% 62%;
+  --accent-blue-hover: 207 55% 52%;
 
-  /* Star Rating Yellow - HSL conversion of #FFA500 */
-  --color-star: 39 100% 50%;
+  /* Star Rating Yellow - #FFB800 */
+  --color-star: 45 100% 50%;
 
   /* Neutrals */
   --color-white: 0 0% 100%;
@@ -48,16 +48,16 @@
   --popover: 0 0% 100%;
   --popover-foreground: 215 25% 17%;
 
-  /* Primary: Navy Blue */
-  --primary: 210 51% 25%;
+  /* Primary: Navy Blue - extracted from design reference */
+  --primary: 210 44% 30%;
   --primary-foreground: 0 0% 100%;
 
-  /* Secondary: Medium Blue */
-  --secondary: 207 39% 47%;
+  /* Secondary: Medium Blue - extracted from design reference */
+  --secondary: 207 42% 55%;
   --secondary-foreground: 0 0% 100%;
 
-  /* Accent: Orange */
-  --accent: 28 80% 52%;
+  /* Accent: Accent Blue - extracted from design reference */
+  --accent: 207 55% 62%;
   --accent-foreground: 0 0% 100%;
 
   --muted: 0 0% 96%;

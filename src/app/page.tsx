@@ -14,66 +14,68 @@ export default function Homepage() {
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      {/* Hero Section */}
+      {/* Hero Section - Matching design reference exactly */}
       <section className="bg-[hsl(var(--primary))] text-white relative overflow-hidden">
-        <div className="container mx-auto px-4 py-16 md:py-24">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+        <div className="container mx-auto px-6 py-12 md:py-16">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="max-w-xl">
+              <h1 className="text-3xl md:text-4xl font-bold mb-5 leading-tight">
                 Sustainable Finds,<br />New Beginnings
               </h1>
-              <p className="text-lg text-gray-200 mb-8">
-                Discover quality pre-loved items and give them a second life. Buy and sell with confidence in our trusted community marketplace.
-              </p>
               <Link
                 href="/shop"
-                className="inline-block btn-accent px-8 py-3 text-lg font-semibold"
+                className="inline-block bg-[hsl(var(--accent))] hover:bg-[hsl(var(--accent-blue-hover))] text-white px-6 py-3 rounded-md font-semibold text-sm transition-all shadow-button hover:shadow-hover"
               >
                 Start Shopping
               </Link>
             </div>
-            <div className="hidden md:block">
-              {/* Placeholder for hero image or illustration */}
-              <div className="relative h-80 bg-white/10 rounded-lg backdrop-blur-sm" />
+            <div className="hidden md:flex justify-end">
+              {/* Hero image matching design reference - books, camera, chair */}
+              <div className="relative h-64 w-full max-w-md">
+                <img
+                  src="/generated/hero-products.png"
+                  alt="Quality secondhand items - camera, books, and chair"
+                  className="w-full h-full object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Main Content */}
-      <main className="flex-1">
+      {/* Main Content - Matching design reference layout */}
+      <main className="flex-1 bg-gray-50">
         {/* Featured Listings Section */}
-        <section className="container mx-auto px-4 py-12">
-          <div className="flex flex-col lg:flex-row gap-8">
-            {/* Sidebar - Category Filters */}
-            <aside className="lg:w-64 flex-shrink-0">
-              <div className="bg-white rounded-lg shadow-card p-6 sticky top-24">
-                <h3 className="text-lg font-bold text-gray-900 mb-4">Category Filters</h3>
-                <div className="space-y-3">
+        <section className="container mx-auto px-6 py-8">
+          <div className="flex flex-col lg:flex-row gap-6">
+            {/* Sidebar - Category Filters - Matching design reference */}
+            <aside className="lg:w-56 flex-shrink-0">
+              <div className="bg-white rounded-lg shadow-sm p-5 sticky top-24">
+                <h3 className="text-base font-bold text-gray-900 mb-4">Category Filters</h3>
+                <div className="space-y-2.5">
                   {mockCategories.map((category) => (
-                    <label key={category.id} className="flex items-center gap-3 cursor-pointer group">
+                    <label key={category.id} className="flex items-center gap-2.5 cursor-pointer group">
                       <input
                         type="checkbox"
-                        className="w-4 h-4 rounded border-gray-300 text-[hsl(var(--primary))] focus:ring-[hsl(var(--primary))]"
+                        className="w-3.5 h-3.5 rounded border-gray-300 text-[hsl(var(--accent))] focus:ring-[hsl(var(--accent))]"
                       />
-                      <span className="flex-1 text-sm text-gray-700 group-hover:text-[hsl(var(--primary))] transition-colors">
+                      <span className="flex-1 text-xs text-gray-700 group-hover:text-[hsl(var(--accent))] transition-colors">
                         {category.icon} {category.name}
                       </span>
-                      <span className="text-xs text-gray-500">({category.count})</span>
                     </label>
                   ))}
                 </div>
 
-                <div className="mt-8">
-                  <h4 className="font-semibold text-gray-900 mb-3">Condition</h4>
+                <div className="mt-6">
+                  <h4 className="font-semibold text-gray-900 mb-3 text-sm">Condition</h4>
                   <div className="space-y-2">
-                    {['New', 'Like New', 'Good', 'Fair'].map((condition) => (
-                      <label key={condition} className="flex items-center gap-3 cursor-pointer group">
+                    {['Used - Good', 'Used - Fair', 'Newer - Good', 'Older'].map((condition) => (
+                      <label key={condition} className="flex items-center gap-2.5 cursor-pointer group">
                         <input
                           type="checkbox"
-                          className="w-4 h-4 rounded border-gray-300 text-[hsl(var(--primary))] focus:ring-[hsl(var(--primary))]"
+                          className="w-3.5 h-3.5 rounded border-gray-300 text-[hsl(var(--accent))] focus:ring-[hsl(var(--accent))]"
                         />
-                        <span className="text-sm text-gray-700 group-hover:text-[hsl(var(--primary))] transition-colors">
+                        <span className="text-xs text-gray-700 group-hover:text-[hsl(var(--accent))] transition-colors">
                           {condition}
                         </span>
                       </label>
@@ -83,14 +85,13 @@ export default function Homepage() {
               </div>
             </aside>
 
-            {/* Featured Items Grid */}
+            {/* Featured Items Grid - Matching design reference */}
             <div className="flex-1">
-              <div className="mb-6">
-                <h2 className="text-2xl font-bold text-gray-900 mb-2">Feature Highlights</h2>
-                <p className="text-gray-600">Discover amazing deals from trusted sellers in your area</p>
+              <div className="mb-5">
+                <h2 className="text-xl font-bold text-gray-900 mb-1">Feature Highlights</h2>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
                 {featuredListings.map((listing) => (
                   <ItemCard key={listing.id} listing={listing} />
                 ))}
@@ -99,61 +100,54 @@ export default function Homepage() {
           </div>
         </section>
 
-        {/* Feature Highlights */}
-        <section className="bg-[hsl(var(--secondary))] py-12 mt-12">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl font-bold text-white text-center mb-8">
-              Buy & Sell with Confidence
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white rounded-lg p-6 text-center shadow-card">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-[hsl(var(--secondary))]" />
+        {/* Feature Highlights - Matching design reference */}
+        <section className="bg-[hsl(var(--secondary))] py-10">
+          <div className="container mx-auto px-6">
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <div className="bg-white rounded-lg p-5 text-center shadow-sm">
+                <div className="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Shield className="w-7 h-7 text-[hsl(var(--accent))]" />
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">Verified Sellers</h3>
-                <p className="text-sm text-gray-600">
-                  Shop with peace of mind from our community of verified sellers
+                <h3 className="font-semibold text-gray-900 mb-2 text-sm">Verified Sellers</h3>
+                <p className="text-xs text-gray-600">
+                  Shop with peace of mind from verified sellers
                 </p>
               </div>
 
-              <div className="bg-white rounded-lg p-6 text-center shadow-card">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Lock className="w-8 h-8 text-[hsl(var(--secondary))]" />
+              <div className="bg-white rounded-lg p-5 text-center shadow-sm">
+                <div className="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Lock className="w-7 h-7 text-[hsl(var(--accent))]" />
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">Secure Payments</h3>
-                <p className="text-sm text-gray-600">
-                  Protected transactions with secure payment processing
+                <h3 className="font-semibold text-gray-900 mb-2 text-sm">Secure Payments</h3>
+                <p className="text-xs text-gray-600">
+                  Protected transactions with buyer protection
                 </p>
               </div>
 
-              <div className="bg-white rounded-lg p-6 text-center shadow-card">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <FileText className="w-8 h-8 text-[hsl(var(--secondary))]" />
+              <div className="bg-white rounded-lg p-5 text-center shadow-sm">
+                <div className="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <FileText className="w-7 h-7 text-[hsl(var(--accent))]" />
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">Eco-Friendly Mission</h3>
-                <p className="text-sm text-gray-600">
-                  Reduce waste and save money by giving items a second life
+                <h3 className="font-semibold text-gray-900 mb-2 text-sm">Eco-Friendly Mission</h3>
+                <p className="text-xs text-gray-600">
+                  Reduce waste and save money together
                 </p>
               </div>
             </div>
-          </div>
-        </section>
 
-        {/* CTA Section */}
-        <section className="container mx-auto px-4 py-16 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Buy & Sell with Community
-          </h2>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Join thousands of satisfied users who are buying and selling quality items in their local community. Start your sustainable shopping journey today!
-          </p>
-          <div className="flex gap-4 justify-center">
-            <Link href="/shop" className="btn-primary">
-              Browse Items
-            </Link>
-            <Link href="/sell" className="btn-secondary">
-              Start Selling
-            </Link>
+            {/* CTA Section - Matching design reference */}
+            <div className="text-center">
+              <Link
+                href="/shop"
+                className="inline-block bg-[hsl(var(--accent))] hover:bg-[hsl(var(--accent-blue-hover))] text-white px-6 py-3 rounded-md font-semibold text-sm transition-all shadow-button hover:shadow-hover"
+              >
+                Buy & Sell with Community
+              </Link>
+            </div>
+
+            <div className="text-center mt-6 text-white text-xs">
+              Buy & Sell with Confidence
+            </div>
           </div>
         </section>
       </main>
