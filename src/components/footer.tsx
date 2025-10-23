@@ -39,6 +39,10 @@ export function Footer() {
           <p className="text-xs text-gray-300">
             © {new Date().getFullYear()} RE-USE & FIND. All rights reserved.
           </p>
+
+          <p className="text-xs text-gray-400/80 mt-2">
+            Powered by Phoenix AI
+          </p>
         </div>
       </div>
     </footer>
